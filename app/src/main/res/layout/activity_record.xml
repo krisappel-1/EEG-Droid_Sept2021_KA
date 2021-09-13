@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+
+    <!--> DEVICE ADDRESS AND STATUS </!-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_device_address"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/device_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_device"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_state"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/connection_state"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/disconnected"
+            android:textSize="14sp"
+            android:textAlignment="viewEnd"/>
+
+    </LinearLayout>
+
+    <!--> RESOLUTION AND PLOT SWITCH </!-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "@string/label_resolution"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/resolution_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="35dp"
+            android:text="@string/default_resolution_text"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/battery_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_battery"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/battery_value"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text=" --- "
+            android:textSize="14sp"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_plots"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+
+        android:checked="true"
+        android:enabled="true"
+        android:text="Plot"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:ignore="HardcodedText" />
+    <androidx.appcompat.widget.SwitchCompat
+
+        android:id="@+id/channel_views_switch"
+        android:layout_width="0dp"
+        android:layout_height="14dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="10dp"
+        android:checked="true"
+        android:enabled="true"
+        android:text="Channel Views"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ChannelViewsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="vertical">
+    <!--> CHANNEL VALUES </!-->
+    <LinearLayout
+        android:id="@+id/channelValueRow1"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:layout_margin="1dp"
+        android:orientation="horizontal">
+        <!-->
+        <TextView EXEMPLARY TEXTVIEW<<<<
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_data"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+        </!-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/channelValueRow2"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_margin="1dp"
+        android:orientation="horizontal">
+        <!-->
+        <TextView EXEMPLARY TEXTVIEW<<<<<
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text = "Data:"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="match_parent"/>
+        </!-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/channelValueRow3"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_margin="1dp"
+        android:orientation="horizontal">
+
+        <!--> EXEMPLARY TEXTVIEW <<<<<<<<<<
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:text = "Data:"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            />
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="match_parent"/>
+         </!-->
+    </LinearLayout>
+    <!--> CHECKBOX ROWS </!-->
+
+    <LinearLayout
+        android:id="@+id/checkBoxRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/checkBoxRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/checkBoxRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    </LinearLayout>
+    </LinearLayout>
+
+    <!--> CHART </!-->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:layout_marginBottom="-8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/YAxis_title"
+            android:layout_width="16dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:rotation="-90"
+            android:text="@string/YAxis_label"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/liveChart"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/XAxis_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/XAxis_label"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:enabled="true"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/recordingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_fiber_manual_record_red_24dp"
+            android:contentDescription="Toggle Recording"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/tapZoomButton"
+            android:text="10^0"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:contentDescription="Set Zoom Factor"
+            tools:ignore="HardcodedText" />
+
+        <!-->
+        <ImageButton
+            android:id="@+id/imageButtonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_save_black_24dp"
+            android:contentDescription="Save Recording"
+            tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:id="@+id/imageButtonDiscard"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_delete_black_24dp"
+            android:contentDescription="Discsard Recording"
+            tools:ignore="HardcodedText" />
+         <!-->
+
+    </LinearLayout>
+
+
+</LinearLayout>
